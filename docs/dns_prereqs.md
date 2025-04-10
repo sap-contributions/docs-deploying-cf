@@ -7,7 +7,7 @@ owner: Release Integration
 
 This topic describes how to set up DNS for your Cloud Foundry environment. 
 
-##<a id='domains'></a> Domains
+## <a id='domains'></a> Domains
 
 You must create several wildcard DNS records to point to your load balancers and routers. Consult the table below for details about these wildcard DNS records.
 
@@ -47,7 +47,7 @@ Cloud Foundry gives each application its own hostname in your app domain. With a
 </table>
 
 
-##<a id='examples'></a> Example Topologies
+## <a id='examples'></a> Example Topologies
 
 Your exact configuration may vary significantly depending on your IaaS and your load balancing configuration. Below are the following example topologies. 
 
@@ -58,14 +58,14 @@ The diagrams below show which particular jobs will have traffic routed to them b
 
 For example, in a default [cf-deployment](https://github.com/cloudfoundry/cf-deployment), the `ssh_proxy` job is deployed to an instance group name `scheduler`. Your load balancers must route traffic to that VM.
 
-###<a id='aws'></a> AWS
+### <a id='aws'></a> AWS
 
 This topology has DNS configured to point five domains to four ELBs:
 
-<%= image_tag('aws-dns-prereq.png') %>
+![AWS DNS](./common/images/aws-dns-prereq.png)
 
-###<a id='haproxy'></a> HAProxy
+### <a id='haproxy'></a> HAProxy
 
 This topology has DNS configured to point five domains to one HAProxy:
 
-<%= image_tag('haproxy-dns-prereq.png') %>
+![HAProxy DNS](./common/images/haproxy-dns-prereq.png)
